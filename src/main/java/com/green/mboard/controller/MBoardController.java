@@ -45,10 +45,13 @@ public class MBoardController {
 		
 		ModelAndView mv = new ModelAndView();
 		
-		mv.setViewName("list");
+	
+		
 		mv.addObject("menu_id", menu_id);
 		mv.addObject("menuList", menuList);
 		mv.addObject("mboardList", mboardList);
+		
+		mv.setViewName("list");
 		
 		return mv;
 	}

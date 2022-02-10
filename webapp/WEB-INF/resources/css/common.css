@@ -1,30 +1,17 @@
 @charset "UTF-8";
-   body      {  box-sizing: border-box; }
-   a         {  text-decoration:none; color:black;  }
-   a:hover   {  text-decoration:none; color:rec;  }
-   
-   table         {  width:800px; margin:0 auto; }
-   table, th, td {  border:1px solid black;
-            border-collapse: collapse;
-   }
-   th, td            { padding:10px; }
-   
-   #menulist td {  text-align: center; }
-   .left        { text-align : left;  }
-   .center      { text-align : center;  }
-   .right       { text-align : right;  }
-   
-   .green       { color: green;  }
-   .red       { color: red; }
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+
+body{
+height:100vh;
+margin:0 auto;
+background-image: linear-gradient(180deg, #32b6ff, #82cdd6, #a6e5aa, #bdff79);
+background-repeat:repeat;
+background-size: cover;}
+
+.title{width:100px; height:100px;}
+.regdate{width:50px; height:100px;}
+.readcount{width:50px; height:100px;}
+.cont{width:100px; height:500px;}
+	
+.left        { text-align : left;  }
+.center      { text-align : center;  }
+.right       { text-align : right;  }

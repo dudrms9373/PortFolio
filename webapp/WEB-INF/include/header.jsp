@@ -10,6 +10,7 @@ header{
 position : fixed; margin:0 auto; 
 width: 100%;top:0;left:0;right:0;
 border: 1px solid;
+font-size: 25px;
 }
 nav{float:left;width:15%; padding-left:100px; }
 .nav1 {text-align: center;}
@@ -36,7 +37,7 @@ $('#main_menu > li > ul').mouseleave(function(){
 <header>
 		<nav id="nav1"> <a href="/">home</a></nav>
 		
-			<nav id="nav2"><a href="/profile/profile">ProFile</a></nav>
+			<nav id="nav2"><a href="/profile">ProFile</a></nav>
 			
 			<nav id="nav3"><ul id="main_menu">
 					<li><a href="/project/List?menu_id=MENU01">Project</a>
@@ -50,6 +51,6 @@ $('#main_menu > li > ul').mouseleave(function(){
 				</ul>
 			</nav>
 			
-			<nav id="nav4"><a href="/certificate/certificate">Certificate</a></nav>
+			<nav id="nav4"><a href="/certificate">Certificate</a></nav>
 </header>
 </html>

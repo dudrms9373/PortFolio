@@ -1,0 +1,6 @@
+
+CREATE  OR REPLACE  TYPE  FILE_ARRAY
+  AS TABLE OF
+       VARCHAR2(4000);
+         
+

@@ -9,12 +9,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/css/common.css"/>
 <style>
 table {border-collapse: collapse;
 	 margin-left:auto; margin-right:auto;
 	margin-top:100px;
 	}
-table td{border: solid 1px;}
+table td{border: solid 1px; text-align: center;font-size:25px;}
 </style>
 </head>
 <body>
@@ -22,8 +23,8 @@ table td{border: solid 1px;}
 
 <table>
 <tr>
-<td colspan="5"></td>
-<td><a href="/project/writeForm?menu_id=${menu_id}">글 쓰기</a></td>
+<td colspan="6"><a href="/project/writeForm?menu_id=${menu_id}">글 쓰기</a></td>
+
 </tr>
 	<tr>
 		<td>번호</td>

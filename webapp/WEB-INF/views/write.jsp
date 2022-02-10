@@ -1,10 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/include/header.jsp" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/css/common.css"/>
+<style>
+table td{font-size: 25px;}
+</style>
 </head>
 <body>
 
