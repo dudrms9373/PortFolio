@@ -31,30 +31,30 @@ public class MBoardController {
 		return "home";
 	}
 	
+	
 	@RequestMapping("/project/List")
-	public  ModelAndView  projectList(String menu_id) {
-
-		HashMap<String, Object> map = new HashMap<String,Object>();
-		
-		map.put("menu_id",menu_id);
+	public  ModelAndView  projectList(@RequestParam HashMap<String, Object> map) {
 
 		List<MenuVo> menuList = menuService.getMenuList();
+
+		List<MboardVo> mboardList = mboardService.getMboardList(map);
 		
+		MboardVo pageVo = (MboardVo) map.get("pageVo");
 		
-		List<MboardVo> mboardList = mboardService.getMbaordList(map);
-		
+		String menu_id = (String) map.get("menu_id");
+
 		ModelAndView mv = new ModelAndView();
-		
-	
-		
+
 		mv.addObject("menu_id", menu_id);
 		mv.addObject("menuList", menuList);
 		mv.addObject("mboardList", mboardList);
+		mv.addObject("pageVo", pageVo);
 		
 		mv.setViewName("list");
 		
 		return mv;
 	}
+	
 	
 	@RequestMapping("/project/writeForm")
 	public ModelAndView projectWriteForm(MboardVo vo) {

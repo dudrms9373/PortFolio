@@ -18,10 +18,12 @@ public class MboardDaoImpl implements MboardDao {
 	@Autowired
 	private  SqlSession  sqlSession;
 
+@Override
 public List<MboardVo> getMboardList(HashMap<String, Object> map){
 	
 	
-	sqlSession.selectList("MBoards.MboardList", map);
+//	sqlSession.selectList("MBoards.MboardList", map);
+	sqlSession.selectList("MBoards.PagingList", map);
 	
 	List<MboardVo> mboardList = (List<MboardVo>) map.get("result");
 	

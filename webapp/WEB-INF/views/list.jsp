@@ -11,21 +11,24 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/css/common.css"/>
 <style>
-table {border-collapse: collapse;
-	 margin-left:auto; margin-right:auto;
-	margin-top:100px;
-	}
-table td{border: solid 1px; text-align: center;font-size:25px;}
+  #board {margin: 0 auto; margin-top: 100px; text-align: center;border: 1px solid;}
+  #board td:nth-of-type(1) { width:48px; text-align:center; }
+  #board td:nth-of-type(2) { width:308px; }
+  #board td:nth-of-type(3) { width:78px; text-align:center; }
+  #board td:nth-of-type(4) { width:78px; text-align:center;}
+  #board td:nth-of-type(5) { width:68px; text-align:center; }
+  #board td:nth-of-type(6) { width:88px; text-align:center;}
+  td{border:1px solid;}
 </style>
 </head>
 <body>
 <br>
 
-<table>
+<table id="board">
 <tr>
 <td colspan="6"><a href="/project/writeForm?menu_id=${menu_id}">글 쓰기</a></td>
-
 </tr>
+
 	<tr>
 		<td>번호</td>
 		<td>제목</td>
@@ -44,6 +47,13 @@ table td{border: solid 1px; text-align: center;font-size:25px;}
 		<td>파일</td>
 	</tr>
 	</c:forEach>
+	
+<tr>
+<td colspan="6">
+    <%@ include  file="/WEB-INF/include/paging.jsp" %>
+</td>
+</tr>
+   
 </table>
 
 </body>

@@ -9,7 +9,9 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/css/common.css"/>
 <style>
+table { text-align:center; margin:0 auto; margin-top: 100px;}
 table td{font-size: 25px;}
+
 </style>
 </head>
 <body>
@@ -34,7 +36,7 @@ table td{font-size: 25px;}
 	
 	<tr>
 		<td><input type="submit" value="등록"></td>
-		<td><a href="/project/List">취소</a></td>
+		<td><a href="/">취소</a></td>
 		
 	</tr>
 

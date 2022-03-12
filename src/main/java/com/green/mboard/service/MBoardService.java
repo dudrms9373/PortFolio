@@ -7,7 +7,7 @@ import com.green.mboard.vo.MboardVo;
 
 public interface MBoardService {
 
-	List<MboardVo> getMbaordList(HashMap<String, Object> map);
+	List<MboardVo> getMboardList(HashMap<String, Object> map);
 
 	void insertBoard(MboardVo vo);
 
@@ -16,6 +16,7 @@ public interface MBoardService {
 	void delete(HashMap<String, Object> map);
 
 	void update(HashMap<String, Object> map);
+
 
 
 

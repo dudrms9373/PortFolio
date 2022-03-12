@@ -1,6 +1,7 @@
 package com.green.mboard.service.impl;
 
 import java.util.HashMap;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +17,38 @@ public class MBoardServiceImpl  implements MBoardService {
 	@Autowired
 	private  MboardDao  mboardDao;
 
-	@Override
-	public List<MboardVo> getMbaordList(HashMap<String, Object> map) {
+
+@Override
+	public List<MboardVo> getMboardList(HashMap<String, Object> map) {
 		
 		List<MboardVo> mboardList = mboardDao.getMboardList(map);
+	
+		// 페이징을 위한 내용 추가
+		int pagetotalcount = 10;
+		
+		//한페이지에 보여줄 라인 수
+		int pagecount = 
+				Integer.parseInt(String.valueOf(map.get("pagecount")));
+	
+		// 현재페이지
+		int nowpage =
+				Integer.parseInt(String.valueOf(map.get("nowpage")));
+		//pagegrpnum
+		int pagegrpnum=
+				Integer.parseInt(String.valueOf(map.get("pagegrpnum")));
+		//전체자료수
+		int totalcount =
+				Integer.parseInt(String.valueOf(map.get("totalcount")));
+		
+		
+		//paging.jsp에서 사용할 변수 값
+		MboardPaging bp = new MboardPaging(nowpage, pagecount, 
+				totalcount, pagetotalcount, pagegrpnum);
+		
+		MboardVo boardVo = bp.getMboardPagingInfo();
+		
+		boardVo.setMenu_id((String)map.get("menu_id"));
+		map.put("pageVo", boardVo);
 		
 		return mboardList;
 	}

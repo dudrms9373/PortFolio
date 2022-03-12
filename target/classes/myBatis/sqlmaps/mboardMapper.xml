@@ -33,6 +33,23 @@
         
         </select>
         
+        <select id="PagingList"
+        statementType="CALLABLE"
+        parameterType="hashmap"
+        resultType="com.green.mboard.vo.MboardVo">
+        
+        {CALL PKG_MBOARD.PROC_MBOARD_PAGINGLIST(
+        #{ menu_id, mode=IN, jdbcType=VARCHAR, javaType=string},
+        #{ nowpage, mode=IN, jdbcType=INTEGER,},
+        #{ pagecount, mode=IN, jdbcType=INTEGER,},
+        #{ totalcount, mode=OUT, jdbcType=INTEGER,},
+        
+        #{ result, mode=OUT, jdbcType=CURSOR, 
+           javaType=ResultSet, resultMap=MboardMap}
+        )}
+        
+        </select>
+        
         
         <select id="MboardView"
         statementType="CALLABLE"

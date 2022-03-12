@@ -40,12 +40,12 @@ $('#main_menu > li > ul').mouseleave(function(){
 			<nav id="nav2"><a href="/profile">ProFile</a></nav>
 			
 			<nav id="nav3"><ul id="main_menu">
-					<li><a href="/project/List?menu_id=MENU01">Project</a>
+					<li><a href="/project/List?menu_id=MENU01&nowpage=1&pagecount=5&pagegrpnum=1">Project</a>
 						<ul class="sub_menu"> 
-							<li><a href="/project/List?menu_id=MENU01">C언어</a></li>
-							<li><a href="/project/List?menu_id=MENU02">Java</a></li>
-							<li><a href="/project/List?menu_id=MENU03">JSP</a></li>
-							<li><a href="/project/List?menu_id=MENU04">Spring</a></li>
+							<li><a href="/project/List?menu_id=MENU01&nowpage=1&pagecount=5&pagegrpnum=1">C언어</a></li>
+							<li><a href="/project/List?menu_id=MENU02&nowpage=1&pagecount=5&pagegrpnum=1">Java</a></li>
+							<li><a href="/project/List?menu_id=MENU03&nowpage=1&pagecount=5&pagegrpnum=1">JSP</a></li>
+							<li><a href="/project/List?menu_id=MENU04&nowpage=1&pagecount=5&pagegrpnum=1">Spring</a></li>
 						</ul>
 					</li>
 				</ul>

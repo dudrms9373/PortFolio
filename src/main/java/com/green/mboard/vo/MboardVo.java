@@ -9,15 +9,34 @@ public class MboardVo {
 	private  String  writer;
 	private  String  regdate;
 	private  int     readcount;
+	
 	private  int     bnum;
 	private  int     lvl;
 	private  int     step;
 	private  int     nref;
+	
 	private  int     delnum;
 	
 	
+	// Paging
 	
+	private int nowpage; // 현재페이지
+	private int prevnowpage; // 현재 페이지의 이전버튼
+	private int nextnowpage; // 현제 페이지의 다음버튼
 	
+	private int totalcount; // 게시글 총 갯수
+	private int totalpagecount; // 화면에 보여줄 페이지 수
+	
+	private int pagestartnum; // 페이지 시작 번호
+	private int pageendnum; // 페이지 끝 번호 
+	private int pagegrpnum; // 페이지 그룹 번호
+	
+	private int pagecount; // 한 페이지 보여줄 게시글 개수
+
+	private boolean ishowpageprev;
+	private boolean ishowpagenext;
+	
+
 	// Constructor
 	public MboardVo() {}
 
@@ -38,8 +57,99 @@ public class MboardVo {
 		this.delnum = delnum;
 	}
 	
+
 	
 	// Getter / Setter
+	
+	public int getNowpage() {
+		return nowpage;
+	}
+
+	public void setNowpage(int nowpage) {
+		this.nowpage = nowpage;
+	}
+
+	public int getPrevnowpage() {
+		return prevnowpage;
+	}
+
+	public void setPrevnowpage(int prevnowpage) {
+		this.prevnowpage = prevnowpage;
+	}
+
+	public int getNextnowpage() {
+		return nextnowpage;
+	}
+
+	public void setNextnowpage(int nextnowpage) {
+		this.nextnowpage = nextnowpage;
+	}
+
+	public int getTotalcount() {
+		return totalcount;
+	}
+
+	public void setTotalcount(int totalcount) {
+		this.totalcount = totalcount;
+	}
+
+	public int getTotalpagecount() {
+		return totalpagecount;
+	}
+
+	public void setTotalpagecount(int totalpagecount) {
+		this.totalpagecount = totalpagecount;
+	}
+
+	public int getPagestartnum() {
+		return pagestartnum;
+	}
+
+	public void setPagestartnum(int pagestartnum) {
+		this.pagestartnum = pagestartnum;
+	}
+
+	public int getPageendnum() {
+		return pageendnum;
+	}
+
+	public void setPageendnum(int pageendnum) {
+		this.pageendnum = pageendnum;
+	}
+
+	public int getPagegrpnum() {
+		return pagegrpnum;
+	}
+
+	public void setPagegrpnum(int pagegrpnum) {
+		this.pagegrpnum = pagegrpnum;
+	}
+
+	public int getPagecount() {
+		return pagecount;
+	}
+
+	public void setPagecount(int pagecount) {
+		this.pagecount = pagecount;
+	}
+
+	public boolean isIshowpageprev() {
+		return ishowpageprev;
+	}
+
+	public void setIshowpageprev(boolean ishowpageprev) {
+		this.ishowpageprev = ishowpageprev;
+	}
+
+	public boolean isIshowpagenext() {
+		return ishowpagenext;
+	}
+
+	public void setIshowpagenext(boolean ishowpagenext) {
+		this.ishowpagenext = ishowpagenext;
+	}
+
+	
 	
 	public int getDelnum() {
 		return delnum;
